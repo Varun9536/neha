@@ -1,0 +1,44 @@
+.section { padding: 110px 0; position: relative; z-index: 1; }
+
+.label {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--p4); margin-bottom: 48px;
+}
+.labelLine { width: 24px; height: 1.5px; background: linear-gradient(to right, var(--p1), var(--p4)); }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+
+.heading {
+  font-size: clamp(36px,5vw,54px); font-weight: 900;
+  letter-spacing: -1.5px; line-height: 1.05; color: var(--white);
+  margin-bottom: 28px;
+}
+.grad { background: linear-gradient(135deg,var(--p4),var(--pink)); -webkit-background-clip:text;-webkit-text-fill-color:transparent; }
+
+.body p { font-size: 15px; color: var(--text-dim); font-weight: 300; line-height: 1.85; margin-bottom: 16px; }
+.body p strong { color: var(--p4); font-weight: 600; }
+
+.status {
+  display: flex; align-items: center; gap: 14px; margin-top: 32px;
+  padding: 18px 22px;
+  background: rgba(74,222,128,0.06); border: 1px solid rgba(74,222,128,0.15);
+  border-radius: var(--r);
+}
+.statusDot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; animation: sp 2s infinite; }
+@keyframes sp { 0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.4)} 50%{box-shadow:0 0 0 6px rgba(74,222,128,0)} }
+.statusRole { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.statusCompany { font-family: var(--mono); font-size: 10px; color: var(--text-muted); }
+
+.cardGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+  backdrop-filter: blur(16px); border-radius: var(--r); padding: 22px;
+  transition: all 0.3s;
+}
+.card:hover { border-color: rgba(168,85,247,0.35); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); background: rgba(124,58,237,0.1); }
+.cardIcon { font-size: 22px; margin-bottom: 10px; }
+.cardLabel { font-family: var(--mono); font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 4px; }
+.cardValue { font-size: 13px; font-weight: 600; color: var(--text); }
+
+@media(max-width:900px){ .grid{grid-template-columns:1fr;gap:40px} .section{padding:80px 0} }
