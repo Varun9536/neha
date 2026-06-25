@@ -48,3 +48,13 @@
   .dotCol{display:none}
   .section{padding:80px 0}
 }
+
+@media(max-width:480px){
+  .section{padding:64px 0}
+  .heading{font-size:34px;letter-spacing:-1px;margin-bottom:34px}
+  .content{padding:24px 20px}
+  .company{font-size:22px}
+  .periodBadge{font-size:10px;white-space:normal;justify-content:center}
+  .desc{font-size:14px;line-height:1.75}
+  .achievement{font-size:13px;justify-content:flex-start}
+}

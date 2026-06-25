@@ -156,3 +156,81 @@
   .scroll { display: none; }
   .hero { padding: 100px 0 70px; }
 }
+
+@media (max-width: 520px) {
+  .hero {
+    min-height: auto;
+    padding: 122px 0 64px;
+    align-items: flex-start;
+  }
+  .inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 18px;
+    gap: 28px;
+    justify-items: center;
+  }
+  .left {
+    width: 100%;
+    max-width: 360px;
+  }
+  .badge,
+  .name,
+  .roles,
+  .bio,
+  .actions {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .badge {
+    max-width: 100%;
+    justify-content: center;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    margin-bottom: 22px;
+  }
+  .name {
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .nameFirst,
+  .nameLast {
+    font-size: clamp(54px, 18vw, 68px);
+    letter-spacing: -2px;
+  }
+  .roles {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .roleChip {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .bio {
+    max-width: 340px;
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 30px;
+  }
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 350px;
+  }
+  .btnPrimary,
+  .btnGlass,
+  .btnIcon {
+    width: 100%;
+    justify-content: center;
+  }
+  .btnPrimary,
+  .btnGlass {
+    padding: 13px 14px;
+  }
+  .btnIcon {
+    height: 46px;
+  }
+}

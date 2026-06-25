@@ -53,3 +53,19 @@
   .linkBody{text-align:center}
   .section{padding:80px 0}
 }
+
+@media(max-width:480px){
+  .section{padding:64px 0}
+  .label{margin-bottom:28px}
+  .inner{gap:34px}
+  .heading{font-size:40px;letter-spacing:-1.5px;line-height:1}
+  .sub{font-size:14px;line-height:1.7}
+  .avail{padding:20px;text-align:left}
+  .availItem{justify-content:flex-start}
+  .link{padding:16px;gap:12px}
+  .linkIcon{width:40px;height:40px;font-size:15px}
+  .linkBody{text-align:left;min-width:0}
+  .linkVal{font-size:13px;word-break:break-word}
+  .emailBox{padding:18px;justify-content:center;text-align:center}
+  .emailBtn{width:100%;justify-content:center}
+}

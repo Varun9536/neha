@@ -21,7 +21,7 @@ const items = [
 
 export default function Marquee() {
   return (
-    <div className={styles.wrap}>
+    <div className={styles.wrapper}>
       <div className={styles.track}>
         {[...items, ...items].map((item, i) => (
           <span key={`${item}-${i}`} className={styles.item}>{item}</span>

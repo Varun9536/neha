@@ -76,3 +76,15 @@
   .colHead,.skillTop{justify-content:center}
   .pills{justify-content:center}
 }
+
+@media(max-width:480px){
+  .section{padding:64px 0}
+  .header{margin-bottom:32px}
+  .heading{font-size:34px;letter-spacing:-1px}
+  .sub{font-size:14px;line-height:1.7}
+  .col,.pillsSection{padding:20px}
+  .colHead{justify-content:center}
+  .skillTop{gap:12px}
+  .skillName{font-size:12px}
+  .pill{font-size:11px;padding:6px 10px}
+}

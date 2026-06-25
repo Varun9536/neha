@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { experience, projects, services, skills } from "@/lib/data";
 import { seoKeywords, site } from "@/lib/site";
@@ -94,6 +94,14 @@ export const metadata: Metadata = {
     "ICBM": "28.6692, 77.4538",
     "theme-color": "#0d0520",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+  themeColor: "#0d0520",
 };
 
 export default function RootLayout({

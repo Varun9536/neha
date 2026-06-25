@@ -62,3 +62,11 @@
   .grid{grid-template-columns:1fr}
   .tags{justify-content:center}
 }
+
+@media(max-width:480px){
+  .section{padding:64px 0}
+  .heading{font-size:34px;letter-spacing:-1px}
+  .sub{font-size:14px;line-height:1.7;margin-bottom:32px}
+  .card{padding:22px}
+  .desc{font-size:13px}
+}
