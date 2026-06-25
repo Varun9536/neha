@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { site } from "@/lib/site";
+import { experience, projects, services, skills } from "@/lib/data";
+import { seoKeywords, site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,64 +18,50 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  applicationName: "Neha Singh HR Portfolio",
+  applicationName: site.title,
+  referrer: "origin-when-cross-origin",
   title: {
     default: site.title,
-    template: "%s | Neha Singh",
+    template: "%s | Neha Singh HR Portfolio",
   },
   description: site.description,
-  keywords: [
-    "Neha Singh HR Recruiter",
-    "Neha Singh portfolio",
-    "HR Recruiter Noida",
-    "HR Recruiter Ghaziabad",
-    "HR Generalist Noida",
-    "Human Resources portfolio",
-    "IT Recruitment",
-    "Talent Acquisition",
-    "Recruitment Coordinator",
-    "HR Operations",
-    "Employee Onboarding",
-    "ATS Management",
-    "HR One ATS",
-    "Naukri recruiter",
-    "LinkedIn Recruiter",
-    "Indeed sourcing",
-    "Internshala hiring",
-    "Recruitment reporting",
-    "Employee engagement",
-    "MBA Human Resources",
-  ],
+  keywords: seoKeywords,
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   publisher: site.name,
   category: "Human Resources",
+  classification: "Professional portfolio",
   alternates: {
     canonical: "/",
+    languages: {
+      "en-IN": "/",
+      "x-default": "/",
+    },
   },
   openGraph: {
     title: site.title,
     description: site.description,
     url: site.url,
-    siteName: "Neha Singh HR Portfolio",
+    siteName: site.title,
     images: [
       {
-        url: "/opengraph-image",
+        url: site.ogImage,
         width: 1200,
         height: 630,
-        alt: "Neha Singh - HR Recruiter and Human Resources Portfolio",
+        alt: "Neha Singh - HR Recruiter in Noida and Ghaziabad",
       },
     ],
-    locale: "en_IN",
+    locale: site.locale,
     type: "profile",
     firstName: "Neha",
     lastName: "Singh",
+    username: "nehas29",
   },
   twitter: {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
-    images: ["/opengraph-image"],
+    images: [site.ogImage],
   },
   robots: {
     index: true,
@@ -92,6 +79,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  manifest: "/manifest.webmanifest",
+  other: {
+    "profile:first_name": "Neha",
+    "profile:last_name": "Singh",
+    "profile:username": "nehas29",
+    "geo.region": "IN-UP",
+    "geo.placename": "Ghaziabad",
+    "ICBM": "28.6692, 77.4538",
+    "theme-color": "#0d0520",
+  },
 };
 
 export default function RootLayout({
@@ -99,6 +101,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const skillNames = Object.values(skills)
+    .flat()
+    .map((skill) => skill.name);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -108,21 +114,27 @@ export default function RootLayout({
         name: site.name,
         givenName: "Neha",
         familyName: "Singh",
-        jobTitle: "HR Recruiter",
+        jobTitle: site.role,
         url: site.url,
-        image: `${site.url}/opengraph-image`,
+        image: `${site.url}${site.ogImage}`,
         email: `mailto:${site.email}`,
-        telephone: site.phone,
         address: {
           "@type": "PostalAddress",
           addressLocality: "Ghaziabad",
           addressRegion: "Uttar Pradesh",
           addressCountry: "IN",
         },
-        sameAs: [site.linkedin, `mailto:${site.email}`, site.whatsapp],
+        sameAs: [site.linkedin, `mailto:${site.email}`],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "recruiting opportunities",
+          email: site.email,
+          areaServed: "IN",
+          availableLanguage: ["English", "Hindi"],
+        },
         worksFor: {
           "@type": "Organization",
-          name: "Eice Technology Pvt. Ltd.",
+          name: site.currentCompany,
           address: {
             "@type": "PostalAddress",
             addressLocality: "Noida",
@@ -140,21 +152,22 @@ export default function RootLayout({
           },
         ],
         knowsAbout: [
-          "IT recruitment",
-          "Talent acquisition",
-          "Candidate sourcing",
-          "Resume screening",
-          "Interview coordination",
-          "Onboarding documentation",
-          "ATS management",
-          "HR operations",
-          "Employee engagement",
-          "Recruitment reporting",
+          ...skillNames,
+          ...services.map((service) => service.title),
         ],
         hasCredential: {
           "@type": "EducationalOccupationalCredential",
           credentialCategory: "MBA",
           name: "MBA in Human Resources",
+        },
+        hasOccupation: {
+          "@type": "Occupation",
+          name: "HR Recruiter",
+          occupationLocation: {
+            "@type": "City",
+            name: "Noida",
+          },
+          skills: skillNames.join(", "),
         },
         description: site.description,
       },
@@ -167,16 +180,86 @@ export default function RootLayout({
         mainEntity: {
           "@id": `${site.url}/#person`,
         },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${site.url}${site.ogImage}`,
+          width: 1200,
+          height: 630,
+        },
       },
       {
         "@type": "WebSite",
         "@id": `${site.url}/#website`,
         url: site.url,
-        name: "Neha Singh HR Portfolio",
+        name: site.title,
+        alternateName: site.shortTitle,
         description: site.description,
+        inLanguage: "en-IN",
         publisher: {
           "@id": `${site.url}/#person`,
         },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${site.url}/#webpage`,
+        url: site.url,
+        name: site.title,
+        description: site.description,
+        isPartOf: {
+          "@id": `${site.url}/#website`,
+        },
+        about: {
+          "@id": `${site.url}/#person`,
+        },
+        mainEntity: {
+          "@id": `${site.url}/#person`,
+        },
+        breadcrumb: {
+          "@id": `${site.url}/#breadcrumb`,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${site.url}/#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: site.url,
+          },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${site.url}/#work`,
+        name: "HR recruitment and operations work",
+        itemListElement: projects.map((project, index) => ({
+          "@type": "CreativeWork",
+          position: index + 1,
+          name: project.title,
+          description: project.desc,
+          keywords: project.tech.join(", "),
+          creator: {
+            "@id": `${site.url}/#person`,
+          },
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${site.url}/#experience`,
+        name: "Professional experience",
+        itemListElement: experience.map((item, index) => ({
+          "@type": "OrganizationRole",
+          position: index + 1,
+          roleName: item.role,
+          startDate: item.period.split(" - ")[0],
+          description: item.desc,
+          memberOf: {
+            "@type": "Organization",
+            name: item.company,
+          },
+        })),
       },
     ],
   };
@@ -191,7 +274,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
       </body>

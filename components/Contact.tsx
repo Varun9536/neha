@@ -2,7 +2,6 @@ import styles from "./Contact.module.css";
 
 const links = [
   { icon: "@", type: "Email", value: "ns291999@gmail.com", sub: "Best way to reach me", href: "mailto:ns291999@gmail.com" },
-  { icon: "WA", type: "WhatsApp", value: "+91 9717421034", sub: "Quick chat / call", href: "https://wa.me/919717421034" },
   { icon: "in", type: "LinkedIn", value: "linkedin.com/in/nehas29", sub: "Professional network", href: "https://linkedin.com/in/nehas29" },
   { icon: "CV", type: "Resume", value: "Download resume", sub: "PDF profile", href: "/Neha_Singh_HR_Resume.pdf" },
 ];

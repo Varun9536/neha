@@ -1,15 +1,49 @@
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "http://localhost:3002";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://nehahr.online";
 
 export const site = {
   name: "Neha Singh",
-  title: "Neha Singh - HR Recruiter in Noida | Human Resources Portfolio",
+  shortTitle: "Neha HR",
+  title: "Neha Singh - HR Recruiter in Noida | Talent Acquisition Portfolio",
   description:
-    "HR Recruiter and MBA Human Resources graduate in Ghaziabad/Noida, skilled in IT recruitment, HR operations, onboarding, ATS tracking, and employee engagement.",
+    "Portfolio of Neha Singh, an HR Recruiter and MBA Human Resources graduate in Ghaziabad/Noida specializing in IT recruitment, candidate sourcing, onboarding, ATS tracking, HR operations, and employee engagement.",
   url: siteUrl,
   email: "ns291999@gmail.com",
-  phone: "+91-9717421034",
   linkedin: "https://linkedin.com/in/nehas29",
-  whatsapp: "https://wa.me/919717421034",
   resume: "/Neha_Singh_HR_Resume.pdf",
+  locale: "en_IN",
+  location: "Ghaziabad, Uttar Pradesh, India",
+  region: "Noida / Ghaziabad",
+  role: "HR Recruiter",
+  currentCompany: "Eice Technology Pvt. Ltd.",
+  ogImage: "/opengraph-image",
 };
+
+export const seoKeywords = [
+  "Neha Singh",
+  "Neha Singh HR",
+  "Neha HR portfolio",
+  "Neha Singh HR Recruiter",
+  "HR Recruiter Noida",
+  "HR Recruiter Ghaziabad",
+  "HR Generalist Noida",
+  "HR Generalist Ghaziabad",
+  "Talent Acquisition Specialist Noida",
+  "IT Recruiter Noida",
+  "IT Recruitment",
+  "Human Resources portfolio",
+  "MBA Human Resources",
+  "Candidate Sourcing",
+  "Resume Screening",
+  "Interview Coordination",
+  "Employee Onboarding",
+  "HR Operations",
+  "ATS Management",
+  "HR One ATS",
+  "Naukri Recruiter",
+  "LinkedIn Recruiter",
+  "Indeed Sourcing",
+  "Internshala Hiring",
+  "Recruitment Reporting",
+  "Employee Engagement",
+];
