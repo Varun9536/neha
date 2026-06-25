@@ -56,4 +56,9 @@
 .card:hover .arrow { color: var(--p4); transform: translate(4px, -2px); }
 
 @media(max-width:900px){ .grid{grid-template-columns:1fr 1fr} }
-@media(max-width:600px){ .grid{grid-template-columns:1fr} .section{padding:80px 0} }
+@media(max-width:600px){
+  .section{padding:80px 0;text-align:center}
+  .label{display:flex;justify-content:center}
+  .grid{grid-template-columns:1fr}
+  .tags{justify-content:center}
+}

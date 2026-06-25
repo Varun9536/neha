@@ -69,4 +69,10 @@
 .pill:hover { background: rgba(124,58,237,0.2); border-color: rgba(168,85,247,0.35); color: var(--p4); transform: translateY(-2px); }
 
 @media(max-width:1000px){ .grid{grid-template-columns:1fr 1fr} .grid .col:nth-child(4){grid-column:auto} .grid .col:nth-child(5){grid-column:auto} }
-@media(max-width:650px){ .grid{grid-template-columns:1fr} .section{padding:80px 0} }
+@media(max-width:650px){
+  .section{padding:80px 0;text-align:center}
+  .label{display:flex;justify-content:center}
+  .grid{grid-template-columns:1fr}
+  .colHead,.skillTop{justify-content:center}
+  .pills{justify-content:center}
+}

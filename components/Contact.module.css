@@ -46,4 +46,10 @@
 .emailBtn { display:inline-flex;align-items:center;gap:8px;padding:11px 22px;background:linear-gradient(135deg,var(--p1),var(--p2));color:white;font-size:13px;font-weight:600;border-radius:10px;text-decoration:none;transition:all .25s;box-shadow:0 4px 16px rgba(124,58,237,0.35); }
 .emailBtn:hover { transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,0.5); }
 
-@media(max-width:900px){ .inner{grid-template-columns:1fr;gap:48px} .section{padding:80px 0} }
+@media(max-width:900px){
+  .inner{grid-template-columns:1fr;gap:48px;text-align:center}
+  .label{display:flex;justify-content:center}
+  .availItem,.link,.emailBox{justify-content:center}
+  .linkBody{text-align:center}
+  .section{padding:80px 0}
+}

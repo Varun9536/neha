@@ -148,7 +148,10 @@
 @keyframes fu { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
 
 @media (max-width: 900px) {
-  .inner { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; }
+  .inner { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; text-align: center; }
+  .left { display: flex; flex-direction: column; align-items: center; }
+  .bio { max-width: 620px; }
+  .roles, .actions { justify-content: center; }
   .card { display: none; }
   .scroll { display: none; }
   .hero { padding: 100px 0 70px; }

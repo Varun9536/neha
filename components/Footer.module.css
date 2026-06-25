@@ -15,4 +15,9 @@
 .cta:hover { transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,0.5); }
 .bottom { display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:8px; }
 .copy,.built { font-family:var(--mono);font-size:11px;color:var(--text-muted);letter-spacing:.3px; }
-@media(max-width:768px){ .inner{padding:0 20px} .top{flex-direction:column;align-items:flex-start} .nav{display:none} }
+@media(max-width:768px){
+  .inner{padding:0 20px;text-align:center}
+  .top{flex-direction:column;align-items:center}
+  .bottom{justify-content:center}
+  .nav{display:none}
+}

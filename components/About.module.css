@@ -41,4 +41,13 @@
 .cardLabel { font-family: var(--mono); font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 4px; }
 .cardValue { font-size: 13px; font-weight: 600; color: var(--text); }
 
-@media(max-width:900px){ .grid{grid-template-columns:1fr;gap:40px} .section{padding:80px 0} }
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr;gap:40px;text-align:center}
+  .label{display:flex;justify-content:center}
+  .status{justify-content:center;text-align:left}
+  .section{padding:80px 0}
+}
+
+@media(max-width:600px){
+  .cardGrid{grid-template-columns:1fr}
+}

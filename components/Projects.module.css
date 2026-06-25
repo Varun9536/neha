@@ -48,5 +48,11 @@
 .cardHighlight { font-family:var(--mono);font-size:10px;color:var(--p4);letter-spacing:.5px;margin-top:auto; }
 .tech { font-family:var(--mono);font-size:10px;color:var(--p4);background:rgba(124,58,237,0.12);border:1px solid rgba(168,85,247,0.2);padding:3px 10px;border-radius:4px; }
 
-@media(max-width:900px){ .grid{grid-template-columns:1fr 1fr} .fcInner{grid-template-columns:1fr;gap:16px} .fcRight{flex-direction:row;justify-content:space-between} }
-@media(max-width:600px){ .grid{grid-template-columns:1fr} .section{padding:80px 0} }
+@media(max-width:900px){ .grid{grid-template-columns:1fr 1fr} .fcInner{grid-template-columns:1fr;gap:16px} .fcRight{flex-direction:row;justify-content:center} }
+@media(max-width:600px){
+  .section{padding:80px 0;text-align:center}
+  .label,.fcTag{display:flex;justify-content:center;margin-left:auto;margin-right:auto}
+  .grid{grid-template-columns:1fr}
+  .fcTech,.cardTech{justify-content:center}
+  .cardTop{justify-content:center;gap:12px}
+}
