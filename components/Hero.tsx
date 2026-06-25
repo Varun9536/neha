@@ -40,6 +40,14 @@ export default function Hero() {
               Hire Me <span>-&gt;</span>
             </a>
             <a
+              href="/Neha_Singh_HR_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.btnGlass}
+            >
+              Resume <span>-&gt;</span>
+            </a>
+            <a
               href="https://linkedin.com/in/nehas29"
               target="_blank"
               rel="noopener noreferrer"
