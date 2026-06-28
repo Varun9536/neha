@@ -122,7 +122,13 @@ export default function RootLayout({
         name: site.name,
         givenName: "Neha",
         familyName: "Singh",
-        jobTitle: site.role,
+        jobTitle: [
+          site.role,
+          "HR Operations",
+          "Talent Acquisition",
+          "HR Recruiter",
+          "Recruitment Executive",
+        ],
         url: site.url,
         image: `${site.url}${site.ogImage}`,
         email: `mailto:${site.email}`,
@@ -170,7 +176,7 @@ export default function RootLayout({
         },
         hasOccupation: {
           "@type": "Occupation",
-          name: "HR Recruiter",
+          name: "HR Executive, HR Operations, and Talent Acquisition",
           occupationLocation: {
             "@type": "City",
             name: "Noida",
