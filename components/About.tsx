@@ -4,7 +4,7 @@ const cards = [
   { icon: "IN", label: "Location", value: "Ghaziabad, Uttar Pradesh" },
   { icon: "HR", label: "Company", value: "Eice Technology Pvt. Ltd." },
   { icon: "TA", label: "Speciality", value: "IT Recruitment" },
-  { icon: "OP", label: "Focus", value: "HR Operations" },
+  { icon: "AI", label: "Focus", value: "AI-assisted Talent Acquisition" },
   { icon: "ATS", label: "Tools", value: "HR One, SAP, HRIS" },
   { icon: "CX", label: "Strength", value: "Candidate Experience" },
 ];
@@ -37,9 +37,10 @@ export default function About() {
               </p>
               <p>
                 My approach is structured, responsive, and candidate-focused. I am
-                seeking a full-time <strong>HR Recruiter or HR Generalist</strong>{" "}
-                role where I can support efficient talent acquisition and people
-                operations.
+                open for full-time{" "}
+                <strong>HR Executive, HR Operations, or Talent Acquisition</strong>{" "}
+                role where I can support efficient hiring, AI-assisted sourcing,
+                and people operations.
               </p>
             </div>
             <div className={styles.status}>

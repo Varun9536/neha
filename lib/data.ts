@@ -2,6 +2,7 @@ export const skills = {
   languages: [
     { name: "End-to-End Recruitment", level: 92 },
     { name: "Candidate Sourcing", level: 90 },
+    { name: "AI-assisted Recruitment", level: 82 },
     { name: "Resume Screening", level: 88 },
     { name: "Telephonic Interviews", level: 86 },
     { name: "Interview Coordination", level: 90 },
@@ -21,6 +22,7 @@ export const skills = {
     { name: "Indeed", level: 84 },
     { name: "Internshala", level: 82 },
     { name: "HR One ATS", level: 84 },
+    { name: "Artificial Intelligence Tools", level: 78 },
     { name: "SAP / HRIS", level: 76 },
   ],
   databases: [
@@ -49,7 +51,7 @@ export const projects = [
     desc: "Managed recruitment across simultaneous IT roles, including requirement gathering, sourcing, resume screening, interview coordination, offer roll-out, and daily progress reporting.",
     tech: ["Naukri", "LinkedIn", "Indeed", "Internshala", "Pipeline Tracker"],
     featured: true,
-    highlight: "50+ profiles/week",
+    highlight: "200+ profiles/day",
   },
   {
     id: "02",
@@ -105,7 +107,7 @@ export const experience = [
     live: true,
     desc: "Managing end-to-end recruitment for IT roles, from requirement gathering and candidate sourcing to screening, interview coordination, offer roll-out, and recruitment reporting.",
     achievements: [
-      "Sourced and screened 50+ candidates per week across Naukri, LinkedIn, Indeed, and Internshala",
+      "Sourced and screened 200+ profiles per day across Naukri, LinkedIn, Indeed, and Internshala",
       "Drafted clear job descriptions and postings for multiple IT positions",
       "Coordinated interviews between candidates and hiring managers with timely feedback follow-up",
       "Maintained live candidate pipeline trackers and daily recruitment progress reports",
@@ -145,7 +147,7 @@ export const experience = [
 
 export const stats = [
   { value: "1+", label: "Year HR Experience", icon: "HR" },
-  { value: "50+", label: "Profiles Screened Weekly", icon: "TA" },
+  { value: "200+", label: "Profiles Screened Daily", icon: "TA" },
   { value: "3", label: "Recruitment Portals", icon: "ATS" },
   { value: "MBA", label: "Human Resources", icon: "ED" },
 ];

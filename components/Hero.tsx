@@ -21,7 +21,9 @@ export default function Hero() {
 
           <div className={styles.roles}>
             <span className={styles.roleChip}>HR Recruiter</span>
+            <span className={styles.roleChip}>HR Executive</span>
             <span className={styles.roleChip}>HR Operations</span>
+            <span className={styles.roleChip}>Talent Acquisition</span>
             <span className={styles.roleChip}>MBA - Human Resources</span>
           </div>
 
@@ -40,7 +42,7 @@ export default function Hero() {
               Hire Me <span>-&gt;</span>
             </a>
             <a
-              href="/Neha_Singh_HR_Resume.pdf"
+              href="/Neha_Singh_Hr.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnGlass}
@@ -77,8 +79,8 @@ export default function Hero() {
             { label: "Company", value: "Eice Technology", type: "normal" },
             { label: "Focus", value: "Recruitment + HR Ops", type: "accent" },
             { label: "Location", value: "Ghaziabad, India", type: "normal" },
-            { label: "Sourcing", value: "50+ profiles/week", type: "normal" },
-            { label: "Open to", value: "Remote / Onsite", type: "normal" },
+            { label: "Screening", value: "200+ profiles/day", type: "normal" },
+            { label: "Open to", value: "HR Executive / HR Ops / TA", type: "normal" },
           ].map((item) => (
             <div key={item.label} className={styles.stat}>
               <span className={styles.statLabel}>{item.label}</span>

@@ -3,12 +3,13 @@ import styles from "./Contact.module.css";
 const links = [
   { icon: "@", type: "Email", value: "ns291999@gmail.com", sub: "Best way to reach me", href: "mailto:ns291999@gmail.com" },
   { icon: "in", type: "LinkedIn", value: "linkedin.com/in/nehas29", sub: "Professional network", href: "https://linkedin.com/in/nehas29" },
-  { icon: "CV", type: "Resume", value: "Download resume", sub: "PDF profile", href: "/Neha_Singh_HR_Resume.pdf" },
+  { icon: "CV", type: "Resume", value: "Download resume", sub: "PDF profile", href: "/Neha_Singh_Hr.pdf" },
 ];
 
 const availability = [
-  { label: "HR Recruiter Roles", available: true },
-  { label: "HR Generalist Roles", available: true },
+  { label: "HR Executive Roles", available: true },
+  { label: "HR Operations Roles", available: true },
+  { label: "Talent Acquisition Roles", available: true },
   { label: "Full-time Roles", available: true },
   { label: "Remote Work", available: true },
   { label: "Onsite (India)", available: true },
@@ -31,7 +32,7 @@ export default function Contact() {
               <span className={styles.dim}>and hiring.</span>
             </h2>
             <p className={styles.sub}>
-              Open to HR Recruiter, HR Generalist, and people operations opportunities.
+              I am open for HR Executive, HR Operations, and Talent Acquisition opportunities.
               I respond within <strong>24 hours.</strong>
             </p>
 
