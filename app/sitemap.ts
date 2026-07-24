@@ -12,11 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: [`${site.url}${site.ogImage}`],
     },
-    {
-      url: `${site.url}${site.resume}`,
-      lastModified: new Date("2026-05-04"),
-      changeFrequency: "yearly",
-      priority: 0.6,
-    },
   ];
 }
+
+
+

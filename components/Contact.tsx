@@ -1,9 +1,10 @@
 import styles from "./Contact.module.css";
+import { site } from "@/lib/site";
 
 const links = [
   { icon: "@", type: "Email", value: "ns291999@gmail.com", sub: "Best way to reach me", href: "mailto:ns291999@gmail.com" },
   { icon: "in", type: "LinkedIn", value: "linkedin.com/in/nehas29", sub: "Professional network", href: "https://linkedin.com/in/nehas29" },
-  { icon: "CV", type: "Resume", value: "Download resume", sub: "PDF profile", href: "/Neha_Singh_Hr.pdf" },
+  { icon: "CV", type: "Resume", value: "View resume", sub: "Google Drive", href: site.resume },
 ];
 
 const availability = [
@@ -81,3 +82,6 @@ export default function Contact() {
     </section>
   );
 }
+
+
+

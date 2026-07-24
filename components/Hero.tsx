@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import { site } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -42,7 +43,7 @@ export default function Hero() {
               Hire Me <span>-&gt;</span>
             </a>
             <a
-              href="/Neha_Singh_Hr.pdf"
+              href={site.resume}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnGlass}
@@ -102,3 +103,6 @@ export default function Hero() {
     </section>
   );
 }
+
+
+

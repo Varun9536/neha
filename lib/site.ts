@@ -10,7 +10,7 @@ export const site = {
   url: siteUrl,
   email: "ns291999@gmail.com",
   linkedin: "https://linkedin.com/in/nehas29",
-  resume: "/Neha_Singh_Hr.pdf",
+  resume: "https://drive.google.com/drive/folders/1bqN9C5PKELTy953VnaIZ-5zRAMlR-EUX",
   locale: "en_IN",
   location: "Ghaziabad, Uttar Pradesh, India",
   region: "Noida / Ghaziabad",
